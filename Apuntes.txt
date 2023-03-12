@@ -1,0 +1,49 @@
+// Estructura del useState
+
+/*
+conts [cliente, setCliente] = useState({});
+conts [clientes, setClientes] = useState([]);
+conts [modal, setModal] = useState(false);
+conts [total, setTotal] = useState(0);
+
+cliente: corresponde a la variable que contiene el valor del estado
+setCliente: corresponde a la función que nos permitirá modificar el estado de la variable cliente
+useState({}): contiene el valor inicial del componente, dentro de sus paréntesis se coloca su valor inicial
+
+*/
+
+Los eventos son camelCase, es decir en lugar de onchange se utiliza onChange
+Todos los eventos disponibles en JS estan disponibles en React
+
+---------------> Sintáxis de los eventos
+
+onClick={descargarPedidos}
+
+El state o funciones que se crean solo estarán disponibles para el compoenenten de donde se crean
+Los Props se pasan del padre al hijo nunca se pueden pasar al revés
+
+<Header
+    nombreProp={ datos o Funciones }
+/>
+
+Dentro del componente se utiliza la palabra reservada "props"
+Si le pasa como parámetro "children" entonces este tomará todos los parámetros que se le pasen desde el componenten padre
+Para este caso se cierra la etiqueta padre, ejemplo: <Erro>CONTENIDO que tendra la variable de children</Erro>
+
+
+// Estructura del useEffect
+
+Siempre es un callback, que se ejecuta cuando el state cambia o cuando el componente está listo
+
+-- Usos
+
+Al ejecutarse automaticamente cuando el código esta listo, es un excelente lugar para colocar código para consultar una API o Localstorage
+
+Debido a que le podemos pasar una dependencia y estar escuchando por los cambios que sucendan en una variable, puede actualizar el componente cuando ese cambio suceda
+
+-- Sintáxis de este Hook
+Dentro siempre va a tener una arrow function
+
+useEffect( () => {
+    console.log('El componente está listo')
+}, []);
